@@ -1,0 +1,20 @@
+CREATE TABLE CLOTHING (id integer, item TEXT, price INTEGER, aisle INTEGER, color TEXT);  
+
+INSERT INTO clothing VALUES (1, "Skinny Jeans", 15.00,3,"blue");
+INSERT INTO clothing VALUES (2, "Bootcut Jeans", 12.00,12, "Black"); 
+INSERT INTO clothing VALUES (3, "Bell Bottom Jeans", 20.00,8, "Blue");
+INSERT INTO clothing VALUES (4, "Crop Top", 12.00,5, "Purple");
+INSERT INTO clothing VALUES (5, "Sweater", 18.00,6,"yellow");
+INSERT INTO clothing VALUES (6, "Denim Jacket",21.00,16,"denim");
+INSERT INTO clothing VALUES (7, "Shorts",10.00,7,"brown");
+INSERT INTO clothing VALUES (8, "Leather Jacket", 35.00,2,"Black");
+INSERT INTO clothing VALUES (9, "Longsleeve shirt", 7.00,20,"pink");
+INSERT INTO clothing VALUES (10, "Shortsleeve shirt", 14.00,9,"orange");
+INSERT INTO clothing VALUES (11, "Hoodie",28.00,26,"white");
+INSERT INTO clothing VALUES (12, "Tank Top",11.00,17,"grey");
+INSERT INTO clothing VALUES (13, "Leggings",5.00,4,"black");
+INSERT INTO clothing VALUES (14, "Socks", 2.00,27,"white");
+INSERT INTO clothing VALUES (15, "COAT", 40.00,19,"Red");
+
+SELECT * FROM clothing ORDER BY PRICE;
+SELECT aisle, SUM (price) FROM clothing GROUP BY color;
