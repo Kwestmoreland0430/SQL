@@ -1,0 +1,41 @@
+CREATE TABLE famous_people (ID INTEGER PRIMARY KEY,first_name TEXT, last_name TEXT,genre TEXT,occupation TEXT);
+
+INSERT INTO famous_people VALUES (1,"Carrie","Underwood","country","singer");
+INSERT INTO famous_people VALUES (2, "Luke","Bryan","country","singer");
+INSERT INTO famous_people VALUES (3, "Katy","Perry","Pop","Singer");
+INSERT INTO famous_people VALUES (4,"Taylor","Swift","Pop","singer");
+INSErT INTO famous_people VALUES (5,"Kane","Brown","country","singer");
+INSERT INTO famous_people VALUES (6, "Miranda","Lambert","country","singer");
+INSERT INTO famous_people VALUES (7, "Miley","Cyrus","Pop","Singer");
+INSERT INTO famous_people VALUES (8, "Lynard", "Skynyrd","rock","singer");
+INSERT INTO famous_people VALUES (9, "Elvis","presley","rock","Singer");
+INSERT INTO famous_people VALUES (10, "Pink", "Floyd","rock","singer");
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    artist_id INTEGER,
+    title TEXT,
+    release_year INTEGER,
+    views NUMERIC
+); 
+
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Carrie Underwood","Hate my Heart",2022,800000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Luke Bryan","Country on",2022,4.8000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Katy Perry","Firework",2010,1.4000000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Taylor Swift","Love Story",2008,90000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Kane Brown","Thank God",2022,24000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Miranda Lambert","House that built me",2009,93000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Miley Cyrus","Flowers",2023,257000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Lynnard Skynyrd","Sweet Home Alabama",1974,135000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Elvis Presley","Jailhouse Rock",1957,243000000);
+INSERT INTO songs (artist_id,title,release_year,views) VALUES ("Pink Floyd","Wish You Were Here",1975,237000000);
+
+SELECT * FROM famous_people;
+
+SELECT first_name, title
+   FROM famous_people, songs
+   WHERE famous_people.id = songs.artist_id;
+   
+   
+
+
